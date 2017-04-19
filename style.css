@@ -159,6 +159,7 @@
   }
   .calc__text {
     width: 80%;
+    margin-bottom: 55px;
   }
   .platform--outer {
     display: none;
@@ -172,7 +173,7 @@
     display: block;
   }
   .plat-option {
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
   }
   .device-type .inner-wrap,
   .ui-type .inner-wrap {
