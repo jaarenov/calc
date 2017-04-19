@@ -278,10 +278,10 @@
   }
   .plat-option {
     width: 280px;
-    padding: 0 0 22px 0;
+    padding: 6px 0 22px 0;
     border: 0;
     background: url(img/calculator/switch_on.png) no-repeat transparent;
-    background-position: 100% center;
+    background-position: 100% top;
   }
   .plat-option img {
     width: auto;
@@ -296,9 +296,10 @@
     margin-bottom: 10px;
   }
   .ui-type .ui-team {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
   .ui-item__text {
+    width: 80%;
     line-height: 24px;
   }
 }
