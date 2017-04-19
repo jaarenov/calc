@@ -111,9 +111,7 @@
   justify-content: space-around;
 }
 .plat-option {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
+  display: block;
   align-items: center;
   width: 274px;
   padding: 22px 0 20px 30px;
@@ -150,6 +148,9 @@
 }
 
 @media (max-width: 1200px) {
+  h3 {
+    padding: 0;
+  }
   .calc__inner {
     padding: 50px 20px;
   }
