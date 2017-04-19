@@ -1,4 +1,5 @@
 .wrapper {height: 100%;  overflow-y: scroll;}
+body{}
 /*___________________________________________________________*/
 .device-type ul, .ui-type ul, .platform ul {
   padding: 0;
