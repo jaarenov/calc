@@ -1,4 +1,4 @@
-/*.wrapper {height: 100%;  overflow-y: scroll;}*/
+.wrapper {height: 100%;  overflow-y: scroll;}
 /*___________________________________________________________*/
 .device-type ul, .ui-type ul, .platform ul {
   padding: 0;
@@ -169,7 +169,7 @@
     margin-bottom: 10px;
   }
   .platform .inner-wrap {
-    flex-direction: column;
+    display: block;
   }
   .plat-option {
     margin-bottom: 20px;
