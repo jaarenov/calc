@@ -17,72 +17,74 @@
   <div class="calc__inner">
     <h2 class="calc__heading">Calculate your app</h2>
     <h3 class="calc__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h3>
-    <form action="" class="app-type">
-      <select name="app_type" id="">
-        <option value="" disabled selected>Application type</option>
-        <option value="native">Native</option>
-        <option value="hybrid">Hybrid</option>
-      </select>
-    </form>
-    <div class="calc-wrap">
-      <div class="device-type">
-          <p class="device-type__title">Choose device type</p>
-          <ul class="inner-wrap">
-              <li class="device-item">
-                <div class="option-box dev-mobile"></div>
-                <span class="device-item__text">Mobile</span>
+    <form action="">
+        <div class="app-type">
+          <select name="app_type" id="">
+            <option value="" disabled selected>Application type</option>
+            <option value="native">Native</option>
+            <option value="hybrid">Hybrid</option>
+          </select>
+        </div>
+        <div class="calc-wrap">
+          <div class="device-type">
+              <p class="device-type__title">Choose device type</p>
+              <ul class="inner-wrap">
+                  <li class="device-item">
+                    <div class="option-box dev-mobile"></div>
+                    <span class="device-item__text">Mobile</span>
+                  </li>
+                  <li class="device-item">
+                    <div class="option-box dev-tablet"></div>
+                    <span class="device-item__text">Tablet</span>
+                  </li>
+                  <li class="device-item">
+                    <div class="option-box dev-other"></div>
+                    <span class="device-item__text">Other</span>
+                  </li>
+              </ul>
+          </div>
+          <div class="platform platform--inside">
+              <p class="platform__title">Preferred platform</p>
+              <ul class="inner-wrap">
+                <li class="plat-option plat-ios">
+                  <img src="img/calculator/ios.png" alt="iOS">
+                </li>
+                <li class="plat-option plat-android">
+                  <img src="img/calculator/android.png" alt="Android">
+                </li>
+                <li class="plat-option plat-windows">
+                  <img src="img/calculator/windows.png" alt="Windows">
+                </li>
+          </div>
+          <div class="ui-type">
+              <p class="ui-type__title">Usability and UI</p>
+              <ul class="inner-wrap">
+                  <li class="ui-item">
+                    <div class="option-box ui-own"></div>
+                    <span class="ui-item__text">Own design</span>
+                  </li>
+                  <li class="ui-item">
+                    <div class="option-box ui-team"></div>
+                    <span class="ui-item__text">Our UI &amp; UX team</span>
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <div class="platform platform--outer">
+            <p class="platform__title">Preferred platform</p>
+            <ul class="inner-wrap">
+              <li class="plat-option plat-ios">
+                <img src="img/calculator/ios.png" alt="iOS">
               </li>
-              <li class="device-item">
-                <div class="option-box dev-tablet"></div>
-                <span class="device-item__text">Tablet</span>
+              <li class="plat-option plat-android">
+                <img src="img/calculator/android.png" alt="Android">
               </li>
-              <li class="device-item">
-                <div class="option-box dev-other"></div>
-                <span class="device-item__text">Other</span>
+              <li class="plat-option plat-windows">
+                <img src="img/calculator/windows.png" alt="Windows">
               </li>
-          </ul>
-      </div>
-      <div class="platform platform--inside">
-          <p class="platform__title">Preferred platform</p>
-          <ul class="inner-wrap">
-            <li class="plat-option plat-ios">
-              <img src="img/calculator/ios.png" alt="iOS">
-            </li>
-            <li class="plat-option plat-android">
-              <img src="img/calculator/android.png" alt="Android">
-            </li>
-            <li class="plat-option plat-windows">
-              <img src="img/calculator/windows.png" alt="Windows">
-            </li>
-      </div>
-      <div class="ui-type">
-          <p class="ui-type__title">Usability and UI</p>
-          <ul class="inner-wrap">
-              <li class="ui-item">
-                <div class="option-box ui-own"></div>
-                <span class="ui-item__text">Own design</span>
-              </li>
-              <li class="ui-item">
-                <div class="option-box ui-team"></div>
-                <span class="ui-item__text">Our UI &amp; UX team</span>
-              </li>
-          </ul>
-      </div>
-    </div>
-    <div class="platform platform--outer">
-        <p class="platform__title">Preferred platform</p>
-        <ul class="inner-wrap">
-          <li class="plat-option plat-ios">
-            <img src="img/calculator/ios.png" alt="iOS">
-          </li>
-          <li class="plat-option plat-android">
-            <img src="img/calculator/android.png" alt="Android">
-          </li>
-          <li class="plat-option plat-windows">
-            <img src="img/calculator/windows.png" alt="Windows">
-          </li>
-    </div>
-    <a href="#" class="calc__btn">Calculate</a>
+        </div>
+        <a href="#" class="calc__btn">Calculate</a>
+      </form>
     </div>
   </div>
 

@@ -233,8 +233,72 @@
   .plat-option img {
     width: 70%;
   }
+  h2:after {
+    width: 144px;
+  }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 410px) {
+  .calc__heading {
+    font: 28px/25px "Open Sans",Arial,Helvetica,sans-serif;
+  }
+  .calc__text {
+    font-size: 14px;
+  }
+  .app-type select {
+    width: 100%;
+  }
+  .ui-type__title,
+  .device-type__title,
+  .platform__title {
+    font-size: 18px;
+  }
+  .device-item__text,
+  .ui-item__text {
+    font-size: 16px;
+  }
+  .option-box {
+    width: 70px;
+    height: 70px;
+  }
+  .device-item .dev-other {
+    background-size: 30%;
+  }
+}
 
+@media (max-width: 370px) {
+  .platform--inside {
+    margin: 0;
+  }
+  h2:after {
+    width: 63px;
+  }
+  .calc__text {
+    padding-top: 0;
+  }
+  .plat-option {
+    width: 280px;
+    padding: 0 0 22px 0;
+    border: 0;
+    background: url(img/calculator/switch_on.png) no-repeat transparent;
+    background-position: 100% center;
+  }
+  .plat-option img {
+    width: auto;
+    height: 25px;
+  }
+  .plat-option:nth-child(1),
+  .plat-option:nth-child(2) {
+    border-bottom: 1px solid #d7d7d7;
+    width: 280px;
+  }
+  .option-box {
+    margin-bottom: 10px;
+  }
+  .ui-type .ui-team {
+    margin-bottom: 15px;
+  }
+  .ui-item__text {
+    line-height: 24px;
+  }
 }
