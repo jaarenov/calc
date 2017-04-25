@@ -1,7 +1,9 @@
 (function($) {
     $(function() {
 
-        $('select').selectSmartPositioning.styler();
+        $('select').selectSmartPositioning.styler({
+            selectSmartPositioning: false
+        });
 
     });
 })(jQuery);
