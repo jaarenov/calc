@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
+
+    <link rel="stylesheet" href="jQueryFormStyler-master/jquery.formstyler.css">
+
 </head>
 <body>
 <div class="wrapper">
@@ -20,9 +23,8 @@
     <form action="">
         <div class="app-type">
           <select name="app_type" id="">
-            <option value="" disabled selected>Application type</option>
             <option value="native">Native</option>
-            <option value="hybrid">Hybrid</option>
+            <option value="">Cross platform</option>
           </select>
         </div>
         <div class="calc-wrap">
@@ -30,7 +32,7 @@
               <p class="device-type__title">Choose device type</p>
               <ul class="inner-wrap">
                   <li class="device-item">
-                    <div class="option-box dev-mobile"></div>
+                    <div class="option-box dev-mobile active"></div>
                     <span class="device-item__text">Mobile</span>
                   </li>
                   <li class="device-item">
@@ -46,7 +48,7 @@
           <div class="platform platform--inside">
               <p class="platform__title">Preferred platform</p>
               <ul class="inner-wrap">
-                <li class="plat-option plat-ios">
+                <li class="plat-option plat-ios active">
                   <img src="img/calculator/ios.png" alt="iOS">
                 </li>
                 <li class="plat-option plat-android">
@@ -60,8 +62,8 @@
               <p class="ui-type__title">Usability and UI</p>
               <ul class="inner-wrap">
                   <li class="ui-item">
-                    <div class="option-box ui-own"></div>
-                    <span class="ui-item__text">Own design</span>
+                    <div class="option-box ui-own active"></div>
+                    <span class="ui-item__text">Not included</span>
                   </li>
                   <li class="ui-item">
                     <div class="option-box ui-team"></div>
@@ -73,7 +75,7 @@
         <div class="platform platform--outer">
             <p class="platform__title">Preferred platform</p>
             <ul class="inner-wrap">
-              <li class="plat-option plat-ios">
+              <li class="plat-option plat-ios active">
                 <img src="img/calculator/ios.png" alt="iOS">
               </li>
               <li class="plat-option plat-android">
@@ -88,65 +90,69 @@
     </div>
   </div>
 
-<!-- <div class="calc-popup">
+<div class="calc-popup">
   <div class="calc-popup__inner">
     <div class="calc-popup__heading">Your price</div>
-    <form action="">
-      <p class="calc-popup__price">$22.000-$24.000</p>
-      <div class="sim-projects">
-        <div class="sim-projects__title">Similar projects</div>
-        <p class="sim-projects__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <ul>
-          <li class="sim-projects__item">
-            <a href="#" class="sim-projects__img">
-              <img src="img/calculator/interactive.png" alt="">
-            </a>
-            <p class="sim-projects__item-title">Interactive TV</p>
-            <span class="sim-projects__price">$23.000</span>
-            <div class="sim-projects__overlay">
-              <a href="#"><img src="img/calculator/astore.png" alt="Appstore"></a>
-              <a href="#"><img src="img/calculator/gplay.png" alt="Google Play"></a>
-            </div>
-          </li>
-          <li class="sim-projects__item">
-            <a href="#" class="sim-projects__img">
-              <img src="img/calculator/heya.png" alt="">
-            </a>
-            <p class="sim-projects__item-title">Heya</p>
-            <span class="sim-projects__price">$23.000</span>
-          </li>
-          <li class="sim-projects__item">
-            <a href="#" class="sim-projects__img">
-              <img src="img/calculator/interactive.png" alt="">
-            </a>
-            <p class="sim-projects__item-title">Interactive TV</p>
-            <span class="sim-projects__price">$23.000</span>
-          </li>
-          <li class="sim-projects__item">
-            <a href="#" class="sim-projects__img">
-              <img src="img/calculator/heya.png" alt="">
-            </a>
-            <p class="sim-projects__item-title">Heya</p>
-            <span class="sim-projects__price">$23.000</span>
-          </li>
-        </ul>
-      </div>
-      <div class="calc-popup__input-wrap">
-        <input type="text" placeholder="Enter your name">
-        <input type="email" placeholder="E-mail">
-        <input type="tel" placeholder="Telephone: +16507599755">
-        <input type="submit" value="order">
-      </div>
-    </form>
+      <form action="">
+        <p class="calc-popup__price">$22.000-$24.000</p>
+        <div class="sim-projects">
+          <div class="sim-projects__title">Similar projects</div>
+          <p class="sim-projects__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <ul>
+            <li class="sim-projects__item">
+              <a href="#" class="sim-projects__img">
+                <img src="img/calculator/interactive.png" alt="">
+              </a>
+              <p class="sim-projects__item-title">Interactive TV</p>
+              <span class="sim-projects__price">$23.000</span>
+              <div class="sim-projects__overlay">
+                <a href="#"><img src="img/calculator/astore.png" alt="Appstore"></a>
+                <a href="#"><img src="img/calculator/gplay.png" alt="Google Play"></a>
+              </div>
+            </li>
+            <li class="sim-projects__item">
+              <a href="#" class="sim-projects__img">
+                <img src="img/calculator/heya.png" alt="">
+              </a>
+              <p class="sim-projects__item-title">Heya</p>
+              <span class="sim-projects__price">$23.000</span>
+            </li>
+            <li class="sim-projects__item">
+              <a href="#" class="sim-projects__img">
+                <img src="img/calculator/interactive.png" alt="">
+              </a>
+              <p class="sim-projects__item-title">Interactive TV</p>
+              <span class="sim-projects__price">$23.000</span>
+            </li>
+            <li class="sim-projects__item">
+              <a href="#" class="sim-projects__img">
+                <img src="img/calculator/heya.png" alt="">
+              </a>
+              <p class="sim-projects__item-title">Heya</p>
+              <span class="sim-projects__price">$23.000</span>
+            </li>
+          </ul>
+        </div>
+        <div class="calc-popup__input-wrap">
+          <input type="text" placeholder="Enter your name">
+          <input type="email" placeholder="E-mail">
+          <input type="tel" placeholder="Telephone: +16507599755">
+          <input type="submit" value="order">
+        </div>
+      </form>
+    </div>
+    <div class="cross"></div>
   </div>
-  <div class="cross"></div>
-</div> -->
 
 
 
 </div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+<script src="jQueryFormStyler-master/jquery.formstyler.min.js"></script>
+<script src="main.js"></script>
 <script src="http://localhost:35729/livereload.js"></script>
+
+
 </body>
 </html>

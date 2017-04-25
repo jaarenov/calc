@@ -26,6 +26,8 @@
 }
 .app-type select{
   -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
   padding: 6px 22px 5px 17px;
   background: url(img/calculator/select_arrow.png) no-repeat;
   background-position: 95% center;
@@ -36,40 +38,51 @@
   border: solid 1px #aaabad;
   font-size: 14px;
   color: #a7a7a7;
+  position: relative;
 }
 
 .calc-wrap {
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
 }
 
 .device-type {
-  width: 50%;
+  width: 80%;
 }
 .ui-type {
   width: 50%;
-  margin-left: 28%;
+  margin-left: 15%;
+  position: relative;
+}
+.ui-type:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 269px;
+  background-image: url(img/calculator/border.png);
+  top: 10%;
+  left: -25%;
 }
 
-.inner-wrap {
-  display: -webkit-flex;
-  display: -ms-flex;
+.device-type .inner-wrap,
+.ui-type .inner-wrap {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-
 
 .ui-type__title, .device-type__title, .platform__title {
   text-align: center;
   font-size: 24px;
   color: #2b2b2b;
 }
-.device-type__title {padding-left: 20%;}
-
 
 .device-item, .ui-item {
-  text-align: center;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
 .dev-mobile { background: url(img/calculator/mobile.png) no-repeat white center center; }
@@ -88,33 +101,36 @@
   transition: .5s all ease;
   cursor: pointer;
 }
-.option-box:hover { opacity: 0.5; }
-.option-box--clicked { background-color: #ffd900;}
-
-.device-item:nth-child(2),
-.device-item:nth-child(3) {
-  margin-left: 12%;
-}
-.ui-item:nth-child(2) {
-  margin-left: 10%;
+.option-box:hover {
+  opacity: 0.5;
+ }
+.option-box.active,
+.option-box.active:hover {
+  background-color: #ffd900;
+  opacity: 1;
 }
 
 .device-item__text,
 .ui-item__text {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 21px;
   color: #2b2b2b;
+  width: 90%;
 }
 
-.platform { margin-bottom: 74px;}
+.platform {
+  margin-bottom: 74px;
+}
 .platform .inner-wrap {
+  display: flex;
   justify-content: space-around;
+  align-items: flex-start;
 }
 .plat-option {
-  display: block;
-  align-items: center;
   width: 274px;
-  padding: 22px 0 20px 30px;
   border-radius: 7px;
   border: solid 1px #d7d7d7;
   transition: .5s all ease;
@@ -122,15 +138,27 @@
   background: url(img/calculator/no_tick.png) no-repeat #fcfcfc;
   background-position: 90% center;
 }
-.plat-option:hover { opacity: 0.5; }
-.plat-option--clicked {
+.plat-option:hover {
+  opacity: 0.5;
+}
+.plat-option.plat-ios {
+  padding: 20px 0 22px 30px;
+}
+.plat-option.plat-android {
+  padding: 22px 0 25px 30px;
+}
+.plat-option.plat-windows {
+  padding: 28px 0 24px 30px;
+}
+.plat-option.active,
+.plat-option.active:hover {
   border: solid 1px #fbda05;
   background: url(img/calculator/tick.png) no-repeat #fcfcfc;
+  background-position: 90% center;
+  opacity: 1;
 }
 
 .calc__btn {
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,16 +203,10 @@
   .plat-option {
     margin: 0 auto 20px auto;
   }
-  .device-type .inner-wrap,
-  .ui-type .inner-wrap {
-    justify-content: space-between;
-  }
-  .device-item, .ui-item {
-    justify-content: space-between;
-  }
+
   .device-type {
     margin: 0 auto;
-    width: 85%;
+    width: 75%;
   }
   .device-item:nth-child(2), .device-item:nth-child(3) {
     margin: 0;
@@ -197,13 +219,16 @@
   }
   .ui-type {
     margin: 0 auto;
-    width: 60%;
+    width: 55%;
   }
   .ui-item:nth-child(2) {
     margin: 0 0 30px 0;
   }
   .ui-item__text {
     width: 100%;
+  }
+  .ui-type:before {
+    display: none;
   }
 }
 
@@ -218,7 +243,7 @@
     width: 100%;
   }
   .ui-type {
-    width: 90%;
+    width: 70%;
   }
   .option-box {
     width: 100px;
@@ -256,10 +281,12 @@
   .device-item__text,
   .ui-item__text {
     font-size: 16px;
+    line-height: 24px;
   }
   .option-box {
     width: 70px;
     height: 70px;
+    margin-bottom: 5px;
   }
   .device-item .dev-other {
     background-size: 30%;
@@ -276,13 +303,26 @@
   .calc__text {
     padding-top: 0;
   }
-  .plat-option {
+  .plat-option,
+  .plat-option.plat-ios,
+  .plat-option.plat-android,
+  .plat-option.plat-windows {
+    width: 280px;
+    padding: 6px 0 22px 0;
+    border: 0;
+    background: url(img/calculator/switch_off.png) no-repeat transparent;
+    background-position: 90% 25%;
+  }
+  .plat-option.active,
+  .plat-option.active:hover {
     width: 280px;
     padding: 6px 0 22px 0;
     border: 0;
     background: url(img/calculator/switch_on.png) no-repeat transparent;
-    background-position: 100% top;
+    background-position: 93% 25%;
+    opacity: 1;
   }
+
   .plat-option img {
     width: auto;
     height: 25px;
@@ -298,9 +338,8 @@
   .ui-type .ui-team {
     margin-bottom: 14px;
   }
-  .ui-item__text {
-    width: 80%;
-    line-height: 24px;
+  .ui-type {
+    width: 90%;
   }
 }
 
