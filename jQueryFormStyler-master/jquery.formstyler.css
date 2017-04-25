@@ -242,6 +242,7 @@
     border: solid 1px #aaabad;
     font-size: 14px;
     color: #a7a7a7;
+    overflow: hidden;
 }
 .jq-selectbox__select:hover {
 	background: #E6E6E6;

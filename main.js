@@ -1,7 +1,7 @@
 (function($) {
     $(function() {
 
-        $('select').styler();
+        $('select').selectSmartPositioning.styler();
 
     });
 })(jQuery);
